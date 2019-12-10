@@ -1,0 +1,1122 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial-.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Arial Bold";
+  src: url("../fonts/Arial-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Arial Bold Italic";
+  src: url("../fonts/Arial-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Arial Italic";
+  src: url("../fonts/Arial-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Black";
+  src: url("../fonts/Titillium-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Bold";
+  src: url("../fonts/Titillium-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Italic";
+  src: url("../fonts/Titillium-BoldItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Bold Upright";
+  src: url("../fonts/Titillium-BoldUpright.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Light";
+  src: url("../fonts/Titillium-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium LightUpright";
+  src: url("../fonts/Titillium-LightUpright.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Light Italic";
+  src: url("../fonts/Titillium-LightItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Regular";
+  src: url("../fonts/Titillium-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium RegularItalic";
+  src: url("../fonts/Titillium-RegularItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Upright";
+  src: url("../fonts/Titillium-RegularUpright.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium SemiBold";
+  src: url("../fonts/Titillium-Semibold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium SemiBold Italic";
+  src: url("../fonts/Titillium-SemiboldItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium SemiBold Upright";
+  src: url("../fonts/Titillium-SemiboldUpright.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium Thin";
+  src: url("../fonts/Titillium-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium ThinItalic";
+  src: url("../fonts/Titillium-ThinItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Titillium ThinUpright";
+  src: url("../fonts/Titillium-ThinUpright.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  border-top: 0.1px solid gray;
+  box-sizing: border-box; }
+
+.main,
+.header,
+.footer {
+  width: 100%;
+  transition: all .3s; }
+
+.header-logo,
+.footer-logo,
+.sprite-icons-flag,
+.header-contact,
+button {
+  cursor: pointer; }
+
+.lines {
+  background-image: url("../../image/pattern.png");
+  background-repeat: repeat;
+  width: 100%;
+  height: 54px;
+  background-position: center;
+  background-size: contain; }
+
+@media only screen and (max-width: 1250px) {
+  html {
+    font-size: 47%; } }
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 40%; } }
+
+body {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #081f3f; }
+
+.heading-red {
+  color: #ce0014; }
+
+button.hamburger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background: linear-gradient(to bottom, #e30016, #e30016) no-repeat center;
+  background-size: 100% 20%;
+  transition: background-size 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none; }
+  button.hamburger:before, button.hamburger:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #e30016;
+    transition: transform 0.3s ease-in-out; }
+  button.hamburger:before {
+    top: 0; }
+  button.hamburger:after {
+    bottom: 0; }
+  button.hamburger.active {
+    background-size: 0 0; }
+    button.hamburger.active:before {
+      transform: translateY(200%) rotate(45deg); }
+    button.hamburger.active:after {
+      transform: translateY(-200%) rotate(-45deg); }
+
+.slider-button {
+  border: none;
+  background-color: #e30016;
+  color: white;
+  font-size: 2rem;
+  font-family: "Titillium Upright";
+  padding: 0.6rem 6rem;
+  margin-bottom: 4rem; }
+
+.actived {
+  color: red !important; }
+
+.header {
+  padding: 3.3rem 0;
+  position: fixed !important;
+  z-index: 2;
+  background-color: white; }
+  .header .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 3.6rem; }
+  .header-logo {
+    margin-left: -7.5rem; }
+  .header-list {
+    margin-left: 1rem;
+    list-style-type: none; }
+  .header-item {
+    display: inline-block;
+    margin-right: 4.5rem; }
+  .header-link {
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #7d7d7d; }
+  .header-option {
+    padding: .65rem 3rem;
+    font-family: 'Titillium LightUpright';
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    background-color: #e30016;
+    color: white; }
+  .header-select {
+    position: relative;
+    height: 100%;
+    margin-left: 4.5rem;
+    display: flex;
+    align-items: center; }
+    .header-select:hover {
+      cursor: pointer; }
+  .header-comment {
+    display: block;
+    font-size: 1.1rem;
+    font-family: 'Titillium LightUpright';
+    color: #575757; }
+  .header-number {
+    font-family: 'Titillium LightUpright';
+    font-weight: 900;
+    color: #323232;
+    font-size: 1.4rem; }
+  .header-contact-content {
+    text-align: center;
+    display: inline-block;
+    height: 100%; }
+  .header-contact {
+    display: inline-flex; }
+  .header .icon-font-container {
+    margin-right: 1rem; }
+  .header .font-phone {
+    padding-top: 0.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: white;
+    background-color: #979797;
+    height: 3.6rem;
+    font-size: 1.8rem;
+    display: inline-block; }
+  .header .sprite-icons-flag,
+  .header .sprite-icons-arrow {
+    background-image: url("../../image/HireTest-sprite.png");
+    background-repeat: no-repeat; }
+  .header .door1,
+  .header .door2,
+  .header .door3 {
+    background-image: url("../../image/HireTest-sprite.png");
+    background-repeat: no-repeat; }
+  .header .door1 {
+    height: 74px;
+    width: 47px;
+    background-position: 0 -600px; }
+  .header .door2 {
+    height: 94px;
+    width: 48px;
+    background-position: 0 -800px; }
+  .header .door3 {
+    height: 74px;
+    width: 47px;
+    background-position: 0 -600px; }
+  .header .dropDown {
+    position: absolute;
+    top: 3.7rem;
+    display: none;
+    background-color: white; }
+  .header .option {
+    display: flex;
+    align-items: center;
+    background-color: #e30016;
+    padding-left: 2rem;
+    padding-top: 1.5rem; }
+    .header .option .options {
+      font-family: 'Titillium LightUpright';
+      color: white;
+      font-size: 2rem;
+      text-transform: uppercase; }
+    .header .option:hover {
+      background-color: white; }
+      .header .option:hover span {
+        color: black; }
+  .header .doors {
+    margin-right: 3rem;
+    color: white;
+    font-size: 4rem;
+    padding-top: 10px; }
+  .header .sprite-icons-flag {
+    margin-right: -6.5rem;
+    height: 25px;
+    width: 25px;
+    background-position: 0 -200px; }
+  .header .arrow-select {
+    width: 3.6rem;
+    margin-right: 0.1rem; }
+  .header .toggleList {
+    display: inline-block !important; }
+  .header-padding {
+    position: relative; }
+  .header-padding:after {
+    content: "";
+    width: 82%;
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+    padding-top: 3rem !important;
+    -webkit-box-shadow: 0 4px 4px -4px black;
+    -moz-box-shadow: 0 4px 4px -4px black;
+    box-shadow: 0 4px 4px -4px black;
+    z-index: -2; }
+
+@media only screen and (max-width: 1250px) {
+  .header-logo {
+    margin-left: -2.5rem; }
+  .header-link {
+    font-size: 1.6rem; }
+  .header-option {
+    padding: .6rem 3rem; }
+  .header .row {
+    padding-left: 4rem;
+    padding-right: 4rem; }
+  .header-item {
+    margin-right: 1.5rem; } }
+
+@media only screen and (max-width: 650px) {
+  .hamburger {
+    display: inline-block !important; }
+  .header-list {
+    position: absolute;
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 64px; }
+    .header-list li {
+      padding: 1rem 4rem;
+      display: block;
+      background-color: maroon;
+      border: 1px solid black;
+      width: 100vw; }
+      .header-list li a {
+        font-size: 2.4rem;
+        color: white; }
+      .header-list li:hover {
+        background-color: white; }
+        .header-list li:hover a {
+          color: black; }
+  .sprite-icons-flag {
+    display: none; }
+  .hamburger {
+    margin-right: -7rem; } }
+
+@media only screen and (max-width: 480px) {
+  .sprite-icons-flag {
+    display: inline-block !important;
+    margin-left: 3rem; }
+  .header-logo {
+    width: 18rem; }
+  .header-select {
+    margin-left: 1.5rem; }
+  .header-contact {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem; }
+  .hamburger {
+    margin-right: -4rem; } }
+
+.footer {
+  border-bottom: 3px solid #ce0014;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  background-color: #323232; }
+  .footer .footer-container {
+    display: inline-block;
+    float: right; }
+  .footer .footer-logo {
+    width: 150px;
+    height: 35px;
+    background-image: url("../../image/HireTest-sprite.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: -200px -100px; }
+  .footer .footer-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none; }
+    .footer .footer-list li {
+      display: inline-block; }
+      .footer .footer-list li a {
+        text-transform: uppercase;
+        font-family: 'Titillium LightUpright';
+        letter-spacing: 0px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: white; }
+  .footer .copyright {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-family: 'Titillium LightUpright';
+    color: #9b9b9b; }
+
+@media only screen and (max-width: 650px) {
+  .footer .footer-logo {
+    display: block;
+    margin: 0 auto; }
+  .footer .footer-container {
+    padding-top: 2rem;
+    display: block;
+    float: none;
+    width: fit-content;
+    margin: 0 auto; } }
+
+.slider-section {
+  padding-top: 7.5rem; }
+  .slider-section .row {
+    max-width: 100vw; }
+  .slider-section .slides {
+    padding-left: 8rem;
+    padding-top: 11rem; }
+  .slider-section .column-background,
+  .slider-section .column-background-second {
+    height: 55rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .slider-section .slider-paragraph {
+    width: 35rem;
+    font-size: 2rem;
+    font-family: 'Titillium LightUpright';
+    color: #323232;
+    padding-bottom: 3.5rem; }
+  .slider-section .slider-heading {
+    line-height: 4.7rem;
+    max-width: 50rem;
+    font-size: 5.2rem;
+    font-weight: 900;
+    font-family: 'Titillium Bold';
+    padding-bottom: 5rem; }
+
+.slick-dots {
+  text-align: left !important;
+  margin: 0;
+  padding: 1rem 0;
+  padding-left: 7rem !important;
+  list-style-type: none; }
+  .slick-dots li {
+    margin: 0 0.25rem; }
+  .slick-dots button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border-radius: 100%;
+    background-color: white !important;
+    border: 1px solid #ce0014 !important;
+    text-indent: -9999px; }
+  .slick-dots li.slick-active button {
+    background-color: red !important; }
+
+@media only screen and (max-width: 650px) {
+  .column-background {
+    display: none; }
+  .row .col-1-of-2 {
+    width: 100% !important; }
+  .slick-dots {
+    left: 0; } }
+
+.info-section {
+  border-top: 1px solid #ce0014;
+  border-bottom: 1px solid #ce0014; }
+  .info-section h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: black;
+    padding-bottom: 3rem; }
+  .info-section p {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-family: 'Titillium Upright';
+    color: #575757;
+    padding-bottom: 2rem; }
+  .info-section h2 {
+    padding-top: 12rem;
+    color: black;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright'; }
+    .info-section h2 span {
+      color: #ce0014; }
+  .info-section img {
+    width: 42rem;
+    height: 39rem;
+    padding-top: 6rem;
+    padding-left: 12rem; }
+  .info-section a {
+    font-family: 'Titillium Upright';
+    padding-bottom: 12rem;
+    color: #ce0014;
+    cursor: pointer; }
+    .info-section a:hover {
+      color: goldenrod; }
+
+@media only screen and (max-width: 650px) {
+  .info-section {
+    border: none; }
+  .info-section .row {
+    display: flex;
+    flex-direction: column; }
+  .order-second {
+    order: -1; }
+  .info-section .row .col-1-of-2 {
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .info-section img {
+    padding-left: 0 !important;
+    width: 32rem; }
+  .info-section h2 {
+    padding-top: 3rem; } }
+
+.business-section {
+  position: relative;
+  background-color: #e5e5e5;
+  box-sizing: content-box; }
+  .business-section .row:not(:last-child) {
+    margin-bottom: 0 !important;
+    padding-bottom: 4.5rem; }
+  .business-section .business-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    background-image: url("../../image/03-image.png");
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .business-section h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: black;
+    padding-bottom: 3rem; }
+  .business-section p {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-family: 'Titillium Upright';
+    color: #575757;
+    padding-bottom: 2rem; }
+  .business-section h2 {
+    padding-top: 8rem;
+    color: black;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright'; }
+    .business-section h2 span {
+      color: #ce0014; }
+  .business-section a {
+    font-family: 'Titillium Upright';
+    color: #ce0014;
+    cursor: pointer;
+    padding-bottom: 4.5rem; }
+    .business-section a:hover {
+      color: goldenrod; }
+
+@media only screen and (max-width: 650px) {
+  .business-background {
+    display: none; }
+  .business-section .row .col-1-of-2 {
+    text-align: center; }
+  .business-section {
+    border-top: 1px solid #ce0014; }
+  .business-section .row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .business-section h2 {
+    padding-top: 3rem; } }
+
+.hire-section {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 2rem;
+  background-color: #ce0014;
+  text-align: center; }
+  .hire-section .image-tag {
+    margin: 0 auto;
+    background-image: url("../../image/HireTest-sprite.png");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 120px;
+    background-position: -200px -200px; }
+  .hire-section h2 {
+    padding-top: 4rem;
+    color: white;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright'; }
+  .hire-section h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 5.2rem;
+    font-weight: 900;
+    font-family: 'Titillium Bold';
+    padding-bottom: 3rem; }
+  .hire-section h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: white;
+    padding-bottom: 3rem; }
+  .hire-section button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Titillium LightUpright";
+    padding: 0.6rem 6rem;
+    margin-bottom: 8rem; }
+
+.description {
+  padding-top: 10.5rem; }
+  .description .row {
+    padding-top: 2rem !important; }
+  .description .description-heading {
+    color: #373737;
+    font-size: 5.6rem;
+    font-weight: 900;
+    font-family: 'Titillium Bold';
+    padding-bottom: 2rem; }
+  .description-paragraph {
+    padding-left: 6.5rem;
+    padding-bottom: 2rem;
+    color: #323232;
+    font-size: 1.6rem;
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600; }
+  .description-item {
+    display: inline-block;
+    color: #cacaca;
+    font-size: 1.4rem;
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600;
+    cursor: pointer; }
+  .description-item:first-child:after {
+    content: "/";
+    color: #cacaca;
+    padding-left: 0.5rem; }
+  .description .ul li {
+    list-style: none;
+    cursor: pointer; }
+  .description-filter {
+    -webkit-box-shadow: 0px 39px 32px 0px white;
+    -moz-box-shadow: 0px 39px 32px 0px white;
+    box-shadow: 0px 39px 32px 0px white; }
+
+.banner {
+  background-image: url("../../../image/01-header-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem; }
+
+.toggle-z-index {
+  z-index: -1; }
+
+@media only screen and (max-width: 650px) {
+  .description .row {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .description .row .description-heading {
+    padding-bottom: 0 !important; } }
+
+.selection {
+  margin-top: 4rem;
+  border-top: 1px solid #575757; }
+  .selection .row .col-1-of-2 {
+    padding-bottom: 5rem; }
+  .selection .row .col-1-of-2:not(:last-child) {
+    border-right: 1px solid #575757; }
+  .selection h2 {
+    color: #6a6a6a;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+    padding-top: 1.7rem;
+    padding-left: 2.5rem; }
+  .selection h2.susspendise {
+    padding-left: 0; }
+  .selection .picker {
+    padding-left: 2rem;
+    padding-top: 2rem; }
+    .selection .picker-list {
+      display: inline-block;
+      list-style: none; }
+    .selection .picker-item {
+      position: relative; }
+    .selection .picker-list:not(:last-child) {
+      padding-right: 10rem; }
+    .selection .picker-item:not(:last-child) {
+      margin-bottom: 1.5rem; }
+    .selection .picker-image {
+      background-image: url("../../image/HireTest-sprite.png");
+      background-repeat: no-repeat;
+      border-radius: 3.5px;
+      background-color: gray;
+      width: 60px;
+      height: 19px;
+      position: relative; }
+      .selection .picker-image div {
+        position: absolute !important;
+        left: -27px !important;
+        top: -1px !important; }
+    .selection .picker .wood1 {
+      background-position: -400px 0px; }
+    .selection .picker .wood2 {
+      background-position: -400px -100px; }
+    .selection .picker .wood3 {
+      background-position: -400px -200px; }
+    .selection .picker .wood4 {
+      background-position: -400px -300px; }
+    .selection .picker .wood5 {
+      background-position: -400px -400px; }
+    .selection .picker .wood6 {
+      background-position: -400px -500px; }
+    .selection .picker .wood7 {
+      background-position: -400px -600px; }
+    .selection .picker .wood8 {
+      background-position: -400px -700px; }
+    .selection .picker .wood9 {
+      background-position: -400px -800px; }
+    .selection .picker .wood10 {
+      background-position: -400px -900px; }
+    .selection .picker .wood11 {
+      background-position: -400px -1000px; }
+    .selection .picker .wood12 {
+      background-position: -400px -1100px; }
+  .selection .collection {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; }
+    .selection .collection .bibendum {
+      width: 45px;
+      height: 75px;
+      position: relative;
+      background-image: url("../../image/HireTest-sprite.png");
+      background-repeat: no-repeat;
+      background-position: 0px -600px; }
+      .selection .collection .bibendum:after {
+        position: absolute;
+        content: "Bibendum";
+        left: -2px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #323232; }
+      .selection .collection .bibendum div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 12px !important; }
+    .selection .collection .aenean {
+      width: 80px;
+      height: 75px;
+      position: relative;
+      background-image: url("../../image/HireTest-sprite.png");
+      background-repeat: no-repeat;
+      background-position: -100px -700px; }
+      .selection .collection .aenean:after {
+        position: absolute;
+        content: "Aenean";
+        left: 20px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0; }
+      .selection .collection .aenean div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 27px !important; }
+    .selection .collection .curabitur {
+      width: 50px;
+      height: 95px;
+      position: relative;
+      background-image: url("../../image/HireTest-sprite.png");
+      background-repeat: no-repeat;
+      background-position: -100px -800px; }
+      .selection .collection .curabitur:after {
+        position: absolute;
+        content: "Curabitur";
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0; }
+      .selection .collection .curabitur div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 12px !important; }
+    .selection .collection .efficitur {
+      width: 70px;
+      height: 75px;
+      position: relative;
+      background-image: url("../../image/HireTest-sprite.png");
+      background-repeat: no-repeat;
+      background-position: -100px -900px; }
+      .selection .collection .efficitur:after {
+        position: absolute;
+        content: "Efficitur";
+        left: 10px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0; }
+      .selection .collection .efficitur div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 19px !important; }
+
+@media only screen and (max-width: 1250px) {
+  .selection .row {
+    padding-left: 1rem;
+    padding-right: 1rem; } }
+
+@media only screen and (max-width: 768px) {
+  .selection .row .col-1-of-2 {
+    float: none;
+    width: 100%;
+    border-right: none !important; }
+  .picker {
+    display: flex;
+    justify-content: center; }
+  .selection {
+    margin-top: 0; }
+  .selection .row .col-1-of-2:last-child {
+    margin-bottom: 6rem; }
+  .lines {
+    height: 30px; }
+  .selection .row .col-1-of-2 .susspendise {
+    padding-top: 1.7rem;
+    padding-left: 2.5rem; } }
+
+@media only screen and (max-width: 480px) {
+  .selection .picker-list:not(:last-child) {
+    padding-right: 6rem; } }
+
+.galery {
+  padding-top: 2.6rem;
+  padding-bottom: 3rem; }
+  .galery .row .col-1-of-2 {
+    display: flex;
+    justify-content: center; }
+  .galery .door-image {
+    width: 24rem;
+    height: 30rem;
+    display: inline-block; }
+  .galery .door-image:not(:last-child) {
+    margin-right: 1rem; }
+  .galery .dummy1:before,
+  .galery .dummy2:before,
+  .galery .dummy3:before,
+  .galery .dummy4:before,
+  .galery .dummy5:before,
+  .galery .dummy6:before,
+  .galery .dummy7:before,
+  .galery .dummy8:before {
+    position: absolute;
+    content: "Edwin Daniels";
+    bottom: -3px;
+    font-size: 1.6rem;
+    font-family: 'Titillium LightUpright';
+    color: #323232; }
+  .galery .dummy1:before {
+    content: "Edwin Daniels";
+    left: 7.7rem; }
+  .galery .dummy2:before {
+    content: "Rhioda Barton";
+    left: 7.2rem; }
+  .galery .dummy3:before {
+    content: "Lillie Walker";
+    left: 8.4rem; }
+  .galery .dummy4:before {
+    content: "Eddwin Jamm";
+    left: 6.4rem; }
+  .galery .dummy5:before {
+    content: "Allice Boonee";
+    left: 7.5rem; }
+  .galery .dummy6:before {
+    content: "Leona Barnett";
+    left: 7.4rem; }
+  .galery .dummy7:before {
+    content: "Doora Moodies";
+    left: 7.4rem; }
+  .galery .dummy8:before {
+    content: "Philip Howerr";
+    left: 7.6rem; }
+  .galery .dummy1 {
+    background-image: url("../../../image/dummy-01.png"); }
+  .galery .dummy2 {
+    background-image: url("../../../image/dummy-02.png"); }
+  .galery .dummy3 {
+    background-image: url("../../../image/dummy-03.png"); }
+  .galery .dummy4 {
+    background-image: url("../../../image/dummy-04.png"); }
+  .galery .dummy5 {
+    background-image: url("../../../image/dummy-05.png"); }
+  .galery .dummy6 {
+    background-image: url("../../../image/dummy-06.png"); }
+  .galery .dummy7 {
+    background-image: url("../../../image/dummy-07.png"); }
+  .galery .dummy8 {
+    background-image: url("../../../image/dummy-08.png"); }
+  .galery .dummy1,
+  .galery .dummy2,
+  .galery .dummy3,
+  .galery .dummy4,
+  .galery .dummy5,
+  .galery .dummy6,
+  .galery .dummy7,
+  .galery .dummy8 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+@media only screen and (max-width: 650px) {
+  .dummy1:before,
+  .dummy2:before,
+  .dummy3:before,
+  .dummy4:before,
+  .dummy5:before,
+  .dummy6:before,
+  .dummy7:before,
+  .dummy8:before {
+    left: 7.7rem !important;
+    bottom: -6px !important; }
+  .galery .col-1-of-2 {
+    padding-bottom: 2rem; } }
+
+.stores {
+  padding-top: 3rem; }
+  .stores table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+    color: black; }
+    .stores table tr {
+      border-bottom: 1px solid #dddddd; }
+    .stores table tr:first-child {
+      border-bottom: 1px solid darkslategray !important; }
+    .stores table tr td:nth-child(4n) {
+      text-align: right !important; }
+    .stores table tr th:nth-child(4n) {
+      text-align: right !important; }
+    .stores table tr td:nth-child(1n) {
+      text-align: left; }
+    .stores table tr th:nth-child(1n) {
+      text-align: left; }
+    .stores table tr td:nth-child(2n) {
+      text-align: right; }
+    .stores table tr th:nth-child(2n) {
+      text-align: right; }
+    .stores table tr td:nth-child(3n) {
+      text-align: right; }
+    .stores table tr th:nth-child(3n) {
+      text-align: right; }
+  .stores td,
+  .stores th {
+    padding: 8px; }
+  .stores .option-buttons {
+    background-color: gray;
+    border: none;
+    padding: 1rem 4rem;
+    color: white;
+    font-family: 'Titillium Upright';
+    font-weight: 600;
+    cursor: pointer; }
+  .stores .markets {
+    display: inline-block; }
+  .stores .countries {
+    display: inline-block;
+    margin-right: 10rem; }
+  .stores button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    opacity: 0.5; }
+
+.activeOption {
+  background-color: #ce0014 !important; }
+
+@media only screen and (max-width: 650px) {
+  .row .markets {
+    display: block;
+    margin-top: 1rem; } }
+
+#map {
+  height: 40rem;
+  width: 100%;
+  background-color: grey; }
+
+.question {
+  padding-bottom: 10rem;
+  text-align: center; }
+  .question h2 {
+    padding-top: 8rem;
+    color: #ce0014;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright'; }
+  .question h3 {
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: #575757;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem; }
+  .question button {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    background-color: #e30016;
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Titillium Upright";
+    padding: 0.6rem 4rem; }
+
+@font-face {
+  font-family: 'svgIcons';
+  src: url("../fonts/svgIcons.woff2") format("woff2"), url("../fonts/svgIcons.woff") format("woff"), url("../fonts/svgIcons.ttf") format("truetype"); }
+
+.font-flag-lng:before, .font-icon-door-1:before, .font-icon-door-2:before, .font-icon-door-3:before, .font-icon-door-4:before, .font-phone:before {
+  font-family: 'svgIcons';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none; }
+
+.font-flag-lng:before {
+  content: ""; }
+
+.font-icon-door-1:before {
+  content: ""; }
+
+.font-icon-door-2:before {
+  content: ""; }
+
+.font-icon-door-3:before {
+  content: ""; }
+
+.font-icon-door-4:before {
+  content: ""; }
+
+.font-phone:before {
+  content: ""; }
+
+.row {
+  max-width: 100rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    @media only screen and (max-width: 320px) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc(100% / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 2rem) / 3) + 2rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 2rem) / 4) + 2rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }

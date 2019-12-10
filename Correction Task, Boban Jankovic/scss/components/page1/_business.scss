@@ -1,0 +1,87 @@
+.business-section {
+  .row:not(:last-child){
+    margin-bottom:0 !important;
+    padding-bottom: 4.5rem;
+  }
+
+  position: relative;
+  background-color: #e5e5e5;
+
+  box-sizing: content-box;
+
+  .business-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    //height: 36rem;
+    width: 50%;
+    background-image: url("../../image/03-image.png");
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: black;
+    padding-bottom: 3rem;
+  }
+
+  p {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-family: 'Titillium Upright';
+    color: $gray-light;
+    padding-bottom: 2rem;
+  }
+
+  h2 {
+    padding-top: 8rem;
+    color: black;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+
+    span {
+      color: $red-color;
+    }
+  }
+
+  a {
+    font-family: 'Titillium Upright';
+    color: $red-color;
+    cursor: pointer;
+    padding-bottom: 4.5rem;;
+
+    &:hover {
+      color: goldenrod;
+    }
+  }
+}
+
+
+
+//650px
+@include respond(phone-big) {
+  .business-background {
+    display: none;
+  }
+
+  .business-section .row .col-1-of-2 {
+    text-align: center;
+  }
+
+  .business-section {
+    border-top: 1px solid $red-color;
+  }
+
+  .business-section .row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .business-section h2 {
+    padding-top: 3rem;
+  }
+}

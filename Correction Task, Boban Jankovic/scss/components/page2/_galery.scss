@@ -1,0 +1,143 @@
+.galery {
+  padding-top: 2.6rem;
+  padding-bottom: 3rem;
+
+  .row .col-1-of-2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .door-image {
+    width: 24rem;
+    height: 30rem;
+    display: inline-block;
+  }
+
+  .door-image:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .dummy1:before,
+  .dummy2:before,
+  .dummy3:before,
+  .dummy4:before,
+  .dummy5:before,
+  .dummy6:before,
+  .dummy7:before,
+  .dummy8:before {
+    position: absolute;
+    content: "Edwin Daniels";
+    bottom: -3px;
+    font-size: 1.6rem;
+    font-family: 'Titillium LightUpright';
+    color: $footer-background;
+  }
+
+  .dummy1:before {
+    content: "Edwin Daniels";
+    left: 7.7rem;
+  }
+
+  .dummy2:before {
+    content: "Rhioda Barton";
+    left: 7.2rem;
+  }
+
+  .dummy3:before {
+    content: "Lillie Walker";
+    left: 8.4rem;
+  }
+
+  .dummy4:before {
+    content: "Eddwin Jamm";
+    left: 6.4rem;
+  }
+
+  .dummy5:before {
+    content: "Allice Boonee";
+    left: 7.5rem;
+  }
+
+  .dummy6:before {
+    content: "Leona Barnett";
+    left: 7.4rem;
+  }
+
+  .dummy7:before {
+    content: "Doora Moodies";
+    left: 7.4rem;
+  }
+
+  .dummy8:before {
+    content: "Philip Howerr";
+    left: 7.6rem;
+  }
+
+  .dummy1 {
+    background-image: url('../../../image/dummy-01.png');
+  }
+
+  .dummy2 {
+    background-image: url('../../../image/dummy-02.png');
+  }
+
+  .dummy3 {
+    background-image: url('../../../image/dummy-03.png');
+  }
+
+  .dummy4 {
+    background-image: url('../../../image/dummy-04.png');
+  }
+
+  .dummy5 {
+    background-image: url('../../../image/dummy-05.png');
+  }
+
+  .dummy6 {
+    background-image: url('../../../image/dummy-06.png');
+  }
+
+  .dummy7 {
+    background-image: url('../../../image/dummy-07.png');
+  }
+
+  .dummy8 {
+    background-image: url('../../../image/dummy-08.png');
+  }
+
+  .dummy1,
+  .dummy2,
+  .dummy3,
+  .dummy4,
+  .dummy5,
+  .dummy6,
+  .dummy7,
+  .dummy8 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+//Responsive layout Galery sections
+//650px
+@include respond(phone-big) {
+
+  .dummy1:before,
+  .dummy2:before,
+  .dummy3:before,
+  .dummy4:before,
+  .dummy5:before,
+  .dummy6:before,
+  .dummy7:before,
+  .dummy8:before {
+    left: 7.7rem !important;
+    bottom: -6px !important;
+  }
+
+  .galery .col-1-of-2 {
+    padding-bottom: 2rem;
+
+  }
+}

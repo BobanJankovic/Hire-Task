@@ -1,0 +1,30 @@
+.question {
+  padding-bottom: 10rem;
+  text-align: center;
+
+  h2 {
+    padding-top: 8rem;
+    color: $red-color;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: $gray-light;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+
+  button {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    background-color: $red-ligther;
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Titillium Upright";
+    padding: 0.6rem 4rem;
+  }
+}

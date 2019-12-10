@@ -1,0 +1,78 @@
+@font-face {
+	font-family: 'svgIcons';
+	src: url('../fonts/svgIcons.woff2') format('woff2'),
+		url('../fonts/svgIcons.woff') format('woff'),
+		url('../fonts/svgIcons.ttf') format('truetype');
+}
+
+@mixin font-styles {
+	font-family: 'svgIcons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == flag-lng {
+		$char: '\E001';
+	}
+	@if $filename == icon-door-1 {
+		$char: '\E002';
+	}
+	@if $filename == icon-door-2 {
+		$char: '\E003';
+	}
+	@if $filename == icon-door-3 {
+		$char: '\E004';
+	}
+	@if $filename == icon-door-4 {
+		$char: '\E005';
+	}
+	@if $filename == phone {
+		$char: '\E006';
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+.font-flag-lng {
+	@include font(flag-lng);
+}
+.font-icon-door-1 {
+	@include font(icon-door-1);
+}
+.font-icon-door-2 {
+	@include font(icon-door-2);
+}
+.font-icon-door-3 {
+	@include font(icon-door-3);
+}
+.font-icon-door-4 {
+	@include font(icon-door-4);
+}
+.font-phone {
+	@include font(phone);
+}
+

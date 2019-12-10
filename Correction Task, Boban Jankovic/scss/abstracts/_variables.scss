@@ -1,0 +1,27 @@
+// Grid
+$grid-width:100rem;
+$gutter-horizontal: 2rem;
+$gutter-vertical: 4rem;
+@include respond(tablet) {
+  $gutter-horizontal: 2.4rem;
+}
+
+//Colors
+//Page1
+$text-color-dark: #081f3f;
+$gray-background:#e5e5e5;
+$gray-lighter:#7d7d7d;
+$gray-darker:#323232;
+$red-color :#ce0014;
+$gray-lighter:#e6e6e6;
+$gray-light:#575757;
+$red-ligther:#e30016;
+$color : #1a98ea;
+$duration : .3s;
+$hire-background:#ce0014;
+$footer-background:#323232;
+//------------------------------------
+//Page2
+$gray-ligth-link:#cacaca;
+$gray-heading:#373737;
+$gray-sub-heading:#6a6a6a;

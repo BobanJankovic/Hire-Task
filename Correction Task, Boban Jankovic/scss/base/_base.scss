@@ -1,0 +1,77 @@
+@include fontArial('', 'Arial');
+@include fontArial('Bold', 'Arial Bold');
+@include fontArial('BoldItalic', 'Arial Bold Italic');
+@include fontArial('Italic', 'Arial Italic');
+@include fontTitillium('Black', 'Titillium Black');
+@include fontTitillium('Bold', 'Titillium Bold');
+@include fontTitillium('BoldItalic', 'Titillium Italic');
+@include fontTitillium('BoldUpright', 'Titillium Bold Upright');
+@include fontTitillium('Light', 'Titillium Light');
+@include fontTitillium('LightUpright', 'Titillium LightUpright');
+@include fontTitillium('LightItalic', 'Titillium Light Italic');
+@include fontTitillium('Regular', 'Titillium Regular');
+@include fontTitillium('RegularItalic', 'Titillium RegularItalic');
+@include fontTitillium('RegularUpright', 'Titillium Upright');
+@include fontTitillium('Semibold', 'Titillium SemiBold');
+@include fontTitillium('SemiboldItalic', 'Titillium SemiBold Italic');
+@include fontTitillium('SemiboldUpright', 'Titillium SemiBold Upright');
+@include fontTitillium('Thin', 'Titillium Thin');
+@include fontTitillium('ThinItalic', 'Titillium ThinItalic');
+@include fontTitillium('ThinUpright', 'Titillium ThinUpright');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  border-top: 0.1px solid gray;
+  box-sizing: border-box;
+}
+
+// WHEN NAV IS EXPANDED
+.main,
+.header,
+.footer {
+  width: 100%;
+  transition: all .3s;
+}
+
+.header-logo,
+.footer-logo,
+.sprite-icons-flag,
+.header-contact,
+button {
+  cursor: pointer;
+}
+
+.lines {
+  background-image: url('../../image/pattern.png');
+  background-repeat: repeat;
+  width: 100%;
+  height: 54px;
+  background-position: center;
+  background-size: contain;
+}
+
+//Scalability of app dimensions because of using rems as unit of measure
+@include respond(tab-land) {
+  html {
+    font-size: 47%;
+  }
+}
+
+//768px
+@include respond(tablet) {
+  html {
+    font-size: 40%;
+  }
+}

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'JohnSansTextPro';
+    src: url('JohnSansTextPro-Regular.woff2') format('woff2'),
+        url('JohnSansTextPro-Regular.woff') format('woff'),
+        url('JohnSansTextPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JohnSansTextPro';
+    src: url('JohnSansTextPro-Bold.woff2') format('woff2'),
+        url('JohnSansTextPro-Bold.woff') format('woff'),
+        url('JohnSansTextPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cordale';
+    src: url('Cordale-Regular.woff2') format('woff2'),
+        url('Cordale-Regular.woff') format('woff'),
+        url('Cordale-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

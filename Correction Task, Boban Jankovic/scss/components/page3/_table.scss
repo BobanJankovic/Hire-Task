@@ -1,0 +1,95 @@
+.stores {
+  padding-top: 3rem;
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+    color: black;
+
+    tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    tr:first-child {
+      border-bottom: 1px solid darkslategray !important;
+    }
+
+    tr td:nth-child(4n) {
+      text-align: right !important;
+    }
+
+    tr th:nth-child(4n) {
+      text-align: right !important;
+    }
+
+    tr td:nth-child(1n) {
+      text-align: left;
+    }
+
+    tr th:nth-child(1n) {
+      text-align: left;
+    }
+
+    tr td:nth-child(2n) {
+      text-align: right;
+    }
+
+    tr th:nth-child(2n) {
+      text-align: right;
+    }
+
+    tr td:nth-child(3n) {
+      text-align: right;
+    }
+
+    tr th:nth-child(3n) {
+      text-align: right;
+    }
+  }
+
+  td,
+  th {
+    padding: 8px;
+  }
+
+  .option-buttons {
+    background-color: gray;
+    border: none;
+    padding: 1rem 4rem;
+    color: white;
+    font-family: 'Titillium Upright';
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .markets {
+    display: inline-block;
+  }
+
+  .countries {
+    display: inline-block;
+    margin-right: 10rem;
+  }
+
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    opacity: 0.5;
+  }
+}
+
+.activeOption {
+  background-color: $red-color !important;
+}
+
+//Responsive layout for Table section
+//650px
+@include respond(phone-big) {
+  .row .markets {
+    display: block;
+    margin-top: 1rem;
+  }
+}

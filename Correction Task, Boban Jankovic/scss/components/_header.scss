@@ -1,0 +1,297 @@
+.header {
+  padding: 3.3rem 0;
+  position: fixed !important;
+  z-index: 2;
+  background-color: white;
+
+  .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 3.6rem;
+  }
+
+  &-logo {
+    margin-left: -7.5rem;
+  }
+
+  &-list {
+    margin-left: 1rem;
+    list-style-type: none;
+  }
+
+  &-item {
+    display: inline-block;
+    margin-right: 4.5rem;
+  }
+
+  &-link {
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #7d7d7d;
+  }
+
+  &-option {
+    padding: .65rem 3rem;
+    font-family: 'Titillium LightUpright';
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    background-color: $red-ligther;
+    color: white;
+  }
+
+  &-select {
+    position: relative;
+    height: 100%;
+    margin-left: 4.5rem;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-comment {
+    display: block;
+    font-size: 1.1rem;
+    font-family: 'Titillium LightUpright';
+    color: $gray-light;
+  }
+
+  &-number {
+    font-family: 'Titillium LightUpright';
+    font-weight: 900;
+    color: #323232;
+    font-size: 1.4rem;
+  }
+
+  &-contact-content {
+    text-align: center;
+    display: inline-block;
+    height: 100%;
+  }
+
+  &-contact {
+    display: inline-flex;
+  }
+
+  .icon-font-container {
+    margin-right: 1rem;
+  }
+
+  .font-phone {
+    padding-top: 0.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: white;
+    background-color: #979797;
+    height: 3.6rem;
+    font-size: 1.8rem;
+    display: inline-block;
+  }
+
+  .sprite-icons-flag,
+  .sprite-icons-arrow {
+    background-image: url('../../image/HireTest-sprite.png');
+    background-repeat: no-repeat;
+  }
+
+  .door1,
+  .door2,
+  .door3 {
+    background-image: url('../../image/HireTest-sprite.png');
+    background-repeat: no-repeat;
+  }
+
+  .door1 {
+    height: 74px;
+    width: 47px;
+    background-position: 0 -600px;
+
+  }
+
+  .door2 {
+    height: 94px;
+    width: 48px;
+    background-position: 0 -800px;
+  }
+
+  .door3 {
+    height: 74px;
+    width: 47px;
+    background-position: 0 -600px;
+  }
+
+  .dropDown {
+    position: absolute;
+    top: 3.7rem;
+    display: none;
+    background-color: white;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    background-color: $red-ligther;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+
+    .options {
+      font-family: 'Titillium LightUpright';
+      color: white;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      background-color: white;
+
+      span {
+        color: black;
+      }
+    }
+  }
+
+  .doors {
+    margin-right: 3rem;
+    color: white;
+    font-size: 4rem;
+    padding-top: 10px;
+  }
+
+  .sprite-icons-flag {
+    margin-right: -6.5rem;
+    height: 25px;
+    width: 25px;
+    background-position: 0 -200px;
+  }
+
+  .arrow-select {
+   
+    width: 3.6rem;
+    margin-right: 0.1rem;
+  }
+
+  .toggleList {
+    display: inline-block !important;
+  }
+
+  &-padding {
+    position: relative;
+
+  }
+
+  &-padding:after {
+    content: "";
+    width: 82%;
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+    padding-top: 3rem !important;
+    -webkit-box-shadow: 0 4px 4px -4px black;
+    -moz-box-shadow: 0 4px 4px -4px black;
+    box-shadow: 0 4px 4px -4px black;
+    z-index: -2
+  }
+
+}
+
+
+//Responsive layout for Header
+//1250px
+@include respond(tab-land) {
+  .header-logo {
+    margin-left: -2.5rem;
+  }
+
+  .header-link {
+    font-size: 1.6rem;
+  }
+
+  .header-option {
+    padding: .6rem 3rem;
+  }
+
+  .header .row {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .header-item {
+    margin-right: 1.5rem;
+  }
+}
+
+//650px
+@include respond(phone-big) {
+  .hamburger {
+    display: inline-block !important;
+  }
+
+  .header-list {
+    position: absolute;
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 64px;
+
+    li {
+      padding: 1rem 4rem;
+      display: block;
+      background-color: maroon;
+      border: 1px solid black;
+      width: 100vw;
+
+      a {
+        font-size: 2.4rem;
+        color: white;
+      }
+
+      &:hover {
+        background-color: white;
+
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .sprite-icons-flag {
+    display: none;
+  }
+
+  .hamburger {
+    margin-right: -7rem;
+  }
+}
+
+//480px
+@include respond(phone-med) {
+  .sprite-icons-flag {
+    display: inline-block !important;
+    margin-left: 3rem;
+  }
+
+  .header-logo {
+    width: 18rem;
+  }
+
+  .header-select {
+    margin-left: 1.5rem;
+  }
+
+  .header-contact {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hamburger {
+    margin-right: -4rem;
+  }
+}

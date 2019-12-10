@@ -1,0 +1,24 @@
+{
+  "1": {
+    "path": "image/slide1.jpg",
+    "path2": "image/slider1.jpg",
+    "tittle": "Nullam risus ultricies et augue",
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
+    "btnText": "Read more"
+  },
+  "2": {
+    "path": "image/slide2.jpg",
+    "path2": "image/slider2.jpg",
+    "tittle": "Nam libero tempore soluta",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in urna quis neque porttitor sagittis.",
+    "btnText": "See more"
+  },
+  "3": {
+    "path": "image/slide3.jpg",
+    "path2": "image/slider3.jpg",
+    "tittle": "Itaque earum rerum hic tenetur",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "btnText": "Buy Now"
+   
+  }
+}

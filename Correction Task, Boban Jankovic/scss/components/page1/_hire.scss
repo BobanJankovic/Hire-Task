@@ -1,0 +1,50 @@
+.hire-section {
+  border-top: 1px solid $gray-background;
+  padding-top: 2rem;
+  background-color: $hire-background;
+  text-align: center;
+
+  .image-tag {
+    margin: 0 auto;
+    background-image: url('../../image/HireTest-sprite.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 120px;
+    background-position: -200px -200px;
+  }
+
+  h2 {
+    padding-top: 4rem;
+    color: white;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 5.2rem;
+    font-weight: 900;
+    font-family: 'Titillium Bold';
+    padding-bottom: 3rem;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: white;
+    padding-bottom: 3rem;
+  }
+
+  button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Titillium LightUpright";
+    padding: 0.6rem 6rem;
+    margin-bottom: 8rem;
+  }
+}

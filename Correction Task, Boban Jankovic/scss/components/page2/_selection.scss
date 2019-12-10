@@ -1,0 +1,266 @@
+.selection {
+  margin-top: 4rem;
+  border-top: 1px solid $gray-light;
+
+  .row .col-1-of-2 {
+    padding-bottom: 5rem;
+  }
+
+  .row .col-1-of-2:not(:last-child) {
+    border-right: 1px solid $gray-light;
+  }
+
+  h2 {
+    color: $gray-sub-heading;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+    padding-top: 1.7rem;
+    padding-left: 2.5rem;
+  }
+
+  h2.susspendise {
+    padding-left: 0;
+  }
+
+  .picker {
+    padding-left: 2rem;
+    padding-top: 2rem;
+
+
+    &-list {
+      display: inline-block;
+      list-style: none;
+    }
+
+    &-item {
+      position: relative;
+
+    }
+
+    &-list:not(:last-child) {
+      padding-right: 10rem;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &-image {
+      background-image: url('../../image/HireTest-sprite.png');
+      background-repeat: no-repeat;
+      border-radius: 3.5px;
+      background-color: gray;
+      width: 60px;
+      height: 19px;
+      position: relative;
+
+      div {
+        position: absolute !important;
+        left: -27px !important;
+        top: -1px !important;
+      }
+    }
+
+    .wood1 {
+      background-position: -400px 0px;
+    }
+
+    .wood2 {
+      background-position: -400px -100px;
+    }
+
+    .wood3 {
+      background-position: -400px -200px;
+    }
+
+    .wood4 {
+      background-position: -400px -300px;
+    }
+
+    .wood5 {
+      background-position: -400px -400px;
+    }
+
+    .wood6 {
+      background-position: -400px -500px;
+    }
+
+    .wood7 {
+      background-position: -400px -600px;
+    }
+
+    .wood8 {
+      background-position: -400px -700px;
+    }
+
+    .wood9 {
+      background-position: -400px -800px;
+    }
+
+    .wood10 {
+      background-position: -400px -900px;
+    }
+
+    .wood11 {
+      background-position: -400px -1000px;
+    }
+
+    .wood12 {
+      background-position: -400px -1100px;
+    }
+  }
+
+  .collection {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    .bibendum {
+      width: 45px;
+      height: 75px;
+      position: relative;
+      background-image: url('../../image/HireTest-sprite.png');
+      background-repeat: no-repeat;
+      background-position: 0px -600px;
+
+      &:after {
+        position: absolute;
+        content: "Bibendum";
+        left: -2px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: $gray-darker;
+
+      }
+
+      div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 12px !important;
+      }
+    }
+
+    .aenean {
+      width: 80px;
+      height: 75px;
+      position: relative;
+      background-image: url('../../image/HireTest-sprite.png');
+      background-repeat: no-repeat;
+      background-position: -100px -700px;
+
+      &:after {
+        position: absolute;
+        content: "Aenean";
+        left: 20px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0;
+      }
+
+      div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 27px !important;
+      }
+    }
+
+    .curabitur {
+      width: 50px;
+      height: 95px;
+      position: relative;
+      background-image: url('../../image/HireTest-sprite.png');
+      background-repeat: no-repeat;
+      background-position: -100px -800px;
+
+      &:after {
+        position: absolute;
+        content: "Curabitur";
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0;
+      }
+
+      div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 12px !important;
+      }
+    }
+
+    .efficitur {
+      width: 70px;
+      height: 75px;
+      position: relative;
+      background-image: url('../../image/HireTest-sprite.png');
+      background-repeat: no-repeat;
+      background-position: -100px -900px;
+
+      &:after {
+        position: absolute;
+        content: "Efficitur";
+        left: 10px;
+        bottom: -20px;
+        font-size: 12px;
+        font-family: 'Titillium LightUpright';
+        color: #b0b0b0;
+      }
+
+      div {
+        position: absolute !important;
+        bottom: -46px !important;
+        left: 19px !important;
+      }
+    }
+  }
+}
+
+
+//Responsive layout for Selection section
+//1250px
+@include respond(tab-land) {
+  .selection .row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+//768px
+@include respond(tablet) {
+  .selection .row .col-1-of-2 {
+    float: none;
+    width: 100%;
+    border-right: none !important;
+  }
+
+  .picker {
+    display: flex;
+    justify-content: center;
+  }
+
+  .selection {
+    margin-top: 0;
+  }
+
+  .selection .row .col-1-of-2:last-child {
+    margin-bottom: 6rem;
+  }
+
+  .lines {
+    height: 30px;
+  }
+
+  .selection .row .col-1-of-2 .susspendise {
+    padding-top: 1.7rem;
+    padding-left: 2.5rem;
+  }
+}
+
+//480px
+@include respond(phone-med) {
+  .selection .picker-list:not(:last-child) {
+    padding-right: 6rem;
+  }
+}

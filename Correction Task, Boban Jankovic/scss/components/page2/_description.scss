@@ -1,0 +1,81 @@
+.description {
+  padding-top:10.5rem;
+  .row {
+    padding-top: 2rem !important;
+  }
+
+  .description-heading {
+    color: $gray-heading;
+    font-size: 5.6rem;
+    font-weight: 900;
+    font-family: 'Titillium Bold';
+    padding-bottom: 2rem;
+  }
+
+  &-paragraph {
+    padding-left: 6.5rem;
+    padding-bottom: 2rem;
+    color: $gray-darker;
+    font-size: 1.6rem;
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  &-item {
+    display: inline-block;
+    color: $gray-ligth-link;
+    font-size: 1.4rem;
+    font-family: 'Titillium LightUpright';
+    letter-spacing: 0px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &-item:first-child:after {
+    content: "/";
+    color: $gray-ligth-link;
+    padding-left: 0.5rem;
+  }
+
+  .ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  &-filter {
+    -webkit-box-shadow: 0px 39px 32px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 39px 32px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 39px 32px 0px rgba(255, 255, 255, 1);
+  }
+}
+
+
+.banner {
+  background-image: url('../../../image/01-header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem;
+}
+
+
+.toggle-z-index {
+  z-index: -1;
+}
+
+//Responsive layout for Description section
+//650px
+@include respond(phone-big) {
+  .description {
+    .row {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .description .row .description-heading {
+    padding-bottom: 0 !important;
+  }
+}

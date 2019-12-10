@@ -1,0 +1,81 @@
+.info-section {
+  border-top: 1px solid $red-color;
+  border-bottom: 1px solid $red-color;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Titillium Upright';
+    color: black;
+    padding-bottom: 3rem;
+  }
+
+  p {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-family: 'Titillium Upright';
+    color: $gray-light;
+    padding-bottom: 2rem;
+  }
+
+  h2 {
+    padding-top: 12rem;
+    color: black;
+    font-size: 2.8rem;
+    font-family: 'Titillium Bold Upright';
+
+    span {
+      color: $red-color;
+    }
+  }
+
+  img {
+    width: 42rem;
+    height: 39rem;
+    padding-top: 6rem;
+    padding-left: 12rem;
+  }
+
+  a {
+    font-family: 'Titillium Upright';
+    padding-bottom: 12rem;
+    color: $red-color;
+    cursor: pointer;
+
+    &:hover {
+      color: goldenrod;
+    }
+  }
+}
+
+//Responsive layout for Info section
+//650px
+@include respond(phone-big) {
+  .info-section {
+    border: none;
+  }
+
+  .info-section .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-second {
+    order: -1;
+  }
+
+  .info-section .row .col-1-of-2 {
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .info-section img {
+    padding-left: 0 !important;
+    width: 32rem;
+  }
+
+  .info-section h2 {
+    padding-top: 3rem;
+  }
+}
