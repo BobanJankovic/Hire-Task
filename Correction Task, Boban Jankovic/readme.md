@@ -38,4 +38,4 @@ Commands
                                                                     Frontend Web Developer
                                                                     Boban Jankovic
 
-change nova grana
+proba setting upstrema
