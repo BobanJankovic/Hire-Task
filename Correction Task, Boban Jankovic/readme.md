@@ -39,4 +39,4 @@ Commands
                                                                     Boban Jankovic
 
 proba setting upstrema
-PULLING
+PULLING setiing working working working
